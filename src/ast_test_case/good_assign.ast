@@ -1,0 +1,42 @@
+instructions =>
+  Assign:
+  location =>
+    Variable:
+    variable =>
+      VAR BEGIN
+        type:
+          ARRAY BEGIN
+            type:
+              RECORD BEGIN
+                SCOPE BEGIN
+                  foo =>
+                    VAR BEGIN
+                      type:
+                        INTEGER
+                    END VAR
+                END SCOPE
+              END RECORD
+            length:
+              6
+          END ARRAY
+      END VAR
+  expression =>
+    Variable:
+    variable =>
+      VAR BEGIN
+        type:
+          ARRAY BEGIN
+            type:
+              RECORD BEGIN
+                SCOPE BEGIN
+                  foo =>
+                    VAR BEGIN
+                      type:
+                        INTEGER
+                    END VAR
+                END SCOPE
+              END RECORD
+            length:
+              6
+          END ARRAY
+      END VAR

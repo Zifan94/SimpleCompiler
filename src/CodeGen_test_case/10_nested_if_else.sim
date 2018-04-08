@@ -1,0 +1,36 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 7;
+	
+	VAR 
+		i: ARRAY 3 OF ARRAY 2 OF INTEGER;
+		j: INTEGER;
+
+BEGIN
+	i[0][0] := 10;
+	i[0][1] := 11;
+	i[1][0] := 12;
+	i[1][1] := 13;
+	READ j;
+	IF j < 2
+	THEN 
+		WRITE i[0][0];
+		IF j < 0
+		THEN
+			WRITE i[0][1]
+		ELSE
+			WRITE i[1][0]
+		END
+	ELSE
+		WRITE i[0][0]+100;
+		IF j > 5
+		THEN
+			WRITE i[0][1]+100
+		ELSE
+			WRITE i[1][0]+100
+		END
+	END
+	
+
+END X.

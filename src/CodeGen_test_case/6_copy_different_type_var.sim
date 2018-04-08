@@ -1,0 +1,19 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 3;
+	TYPE
+		AA = ARRAY sz OF INTEGER;
+	VAR 
+		i: INTEGER;
+		j: INTEGER;
+		array1 : AA;
+		array2 : AA;
+BEGIN
+	i := 3;
+	j := i;
+	WRITE j;
+	array1[2] := 1;
+	array2 := array1;
+	WRITE array2[2]
+END X.

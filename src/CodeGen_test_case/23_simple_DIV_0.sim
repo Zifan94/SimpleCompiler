@@ -1,0 +1,8 @@
+PROGRAM X;
+	VAR x: INTEGER;
+BEGIN
+	READ x;
+	x := x DIV 0;
+	WRITE x;
+	WRITE 11
+END X.

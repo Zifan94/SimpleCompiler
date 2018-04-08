@@ -1,0 +1,16 @@
+PROGRAM X;
+CONST
+  sc = 1;
+  sz = 7;
+TYPE
+  D = RECORD
+    y : INTEGER;END;
+  C = ARRAY sz OF D;
+  B = RECORD
+    x : C;END;
+  A = ARRAY sz OF B;
+VAR
+  a: A;
+BEGIN
+  a[1].x[2].y := -20
+END X.

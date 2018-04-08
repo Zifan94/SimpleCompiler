@@ -1,0 +1,12 @@
+PROGRAM X; 
+	CONST s=47; 
+	TYPE R= RECORD 
+		a,b: RECORD 
+			a,x:INTEGER; 
+		END; 
+		q:ARRAY s OF INTEGER; 
+	END; 
+	A=ARRAY s+1 OF RECORD X:R;
+	END;
+END X.
+

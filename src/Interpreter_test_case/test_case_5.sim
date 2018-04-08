@@ -1,0 +1,22 @@
+PROGRAM X;
+	TYPE
+		a = ARRAY 7 OF INTEGER;
+		b = RECORD
+			aa : INTEGER;
+			bb : INTEGER;
+			cc : ARRAY 2 OF INTEGER;
+			dd : a;
+		END;
+	VAR x: a;
+		i: INTEGER;
+		z: b;
+BEGIN
+	i := 0;
+	REPEAT
+		x[i] := i;
+		WRITE x[i];
+		i := i+1;
+		WRITE i
+	UNTIL	i=7 END;
+	WRITE x[2]
+END X.

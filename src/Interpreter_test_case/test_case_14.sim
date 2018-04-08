@@ -1,0 +1,31 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 7;
+	TYPE
+		C = ARRAY sz OF INTEGER;
+		B = RECORD
+			x: INTEGER;
+			y: INTEGER;END;
+		A = ARRAY sz OF B;
+		E = ARRAY sz OF A;
+		Z = ARRAY sz OF E;
+	VAR 
+		i: INTEGER;
+		x: Z;
+
+BEGIN
+	i := 1;
+	WHILE i <= 6
+	DO
+		x[0][i][2].y := 5+i;
+		i := i+i
+	END;
+
+	i := i-i+1;
+	REPEAT
+		WRITE x[0][i][2].y;
+		i := i+i
+	UNTIL i>6 END
+
+END X.

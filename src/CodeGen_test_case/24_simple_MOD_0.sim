@@ -1,0 +1,10 @@
+PROGRAM X;
+	VAR x: INTEGER;
+		y: INTEGER;
+BEGIN
+	READ x;
+	y := 0;
+	x := x MOD y;
+	WRITE x;
+	WRITE 11
+END X.

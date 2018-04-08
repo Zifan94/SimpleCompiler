@@ -1,0 +1,15 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 7;
+	
+	VAR 
+		i: ARRAY 3 OF ARRAY 2 OF INTEGER;
+		j: INTEGER;
+
+BEGIN
+	IF 1 # 2
+	THEN WRITE i[0][0] END
+	
+
+END X.

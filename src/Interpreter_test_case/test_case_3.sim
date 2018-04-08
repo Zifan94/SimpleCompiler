@@ -1,0 +1,5 @@
+PROGRAM X;
+	CONST ff = 42;
+BEGIN
+	WRITE ff+5
+END X.

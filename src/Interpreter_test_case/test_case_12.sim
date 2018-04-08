@@ -1,0 +1,21 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 7;
+	TYPE
+		C = ARRAY sz OF INTEGER;
+		B = RECORD
+			x: INTEGER;
+			y: INTEGER;END;
+		A = ARRAY sz OF B;
+		E = ARRAY sz OF A;
+		Z = ARRAY sz OF E;
+	VAR 
+		i: INTEGER;
+		x: Z;
+
+BEGIN
+	x[0][1][2].y := 20;
+	WRITE x[0][1][2].y;
+	WRITE x[0][1][2].x
+END X.

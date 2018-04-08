@@ -1,0 +1,49 @@
+PROGRAM X;
+	CONST
+		sc = 1;
+		sz = 3;
+	TYPE
+		C = ARRAY sz OF INTEGER;
+		B = RECORD
+			x: INTEGER;
+			y: INTEGER;END;
+		A = ARRAY sz*2 OF B;
+		E = ARRAY sz OF A;
+	VAR 
+		i: INTEGER;
+		j: INTEGER;
+		k: INTEGER;
+		m: INTEGER;
+		x: E; (* 4 * 8 matrix *)
+
+BEGIN
+	i := 0;
+	j := 0;
+	k := 0;
+	WHILE i < sz
+	DO
+		k := k+1;
+		m := k;
+		j := 0;
+		WHILE j < sz*2
+		DO
+			m := m*10;
+			x[i][j].x := m;
+			j := j+1
+		END;
+		i := i+1
+	END;
+
+	i := 0;
+	j := 0;
+	REPEAT
+		j := 0;
+		REPEAT
+			WRITE x[i][j].x;
+			j := j+1
+		UNTIL j >= sz*2 END;
+		i := i+1;
+		WRITE i
+	UNTIL i>=sz+3 END
+
+END X.
