@@ -19,6 +19,9 @@
 		DCB0C27F207FE22300575B3B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C27E207FE22300575B3B /* ErrorHandler.swift */; };
 		DCB0C281207FE6DC00575B3B /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C280207FE6DC00575B3B /* Stack.swift */; };
 		DCB0C285207FEA5400575B3B /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C284207FEA5400575B3B /* Global.swift */; };
+		DCB0C287208118BC00575B3B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C286208118BC00575B3B /* Parser.swift */; };
+		DCB0C28920811B0800575B3B /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C28820811B0800575B3B /* Observer.swift */; };
+		DCB0C28B208171CA00575B3B /* textColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0C28A208171CA00575B3B /* textColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		DCB0C27E207FE22300575B3B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		DCB0C280207FE6DC00575B3B /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		DCB0C284207FEA5400575B3B /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		DCB0C286208118BC00575B3B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		DCB0C28820811B0800575B3B /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		DCB0C28A208171CA00575B3B /* textColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 				DCB0C27E207FE22300575B3B /* ErrorHandler.swift */,
 				DCB0C280207FE6DC00575B3B /* Stack.swift */,
 				DCB0C284207FEA5400575B3B /* Global.swift */,
+				DCB0C286208118BC00575B3B /* Parser.swift */,
+				DCB0C28820811B0800575B3B /* Observer.swift */,
+				DCB0C28A208171CA00575B3B /* textColor.swift */,
 			);
 			path = SimpleCompiler;
 			sourceTree = "<group>";
@@ -274,10 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB0C28B208171CA00575B3B /* textColor.swift in Sources */,
 				DCB0C24D207FD84800575B3B /* ViewController.swift in Sources */,
+				DCB0C28920811B0800575B3B /* Observer.swift in Sources */,
 				DCB0C279207FDD6600575B3B /* Scanner.swift in Sources */,
 				DCB0C27F207FE22300575B3B /* ErrorHandler.swift in Sources */,
 				DCB0C24B207FD84800575B3B /* AppDelegate.swift in Sources */,
+				DCB0C287208118BC00575B3B /* Parser.swift in Sources */,
 				DCB0C281207FE6DC00575B3B /* Stack.swift in Sources */,
 				DCB0C27B207FDF6100575B3B /* Token.swift in Sources */,
 				DCB0C285207FEA5400575B3B /* Global.swift in Sources */,
