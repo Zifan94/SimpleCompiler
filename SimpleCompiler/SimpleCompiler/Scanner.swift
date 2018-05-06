@@ -44,8 +44,12 @@ class Scanner{
         {
             let newToken = Token(inputStr: "eof", type: "eof", firstPos: self.nextPos, lastPos: self.nextPos, lineNum: self.curLine, posNum: self.curPos, myErrHandler: self.myErrHandler)
             self.nextPos += 1
-            self.curPos += 1
+//            self.curPos += 1
             return newToken
+        }
+        if self.nextPos > self.totalLen { // next() is called after eof returned
+            let ErrMsg = "Error: <Scanner> Cannot call next() after eof returned"
+            self.myErrHandler.RecordScannerError(errMsg: ErrMsg, lineNum: 0 , posNum: 0)
         }
         
         var startPos = self.nextPos
@@ -80,7 +84,7 @@ class Scanner{
                     if GlobalVal.DOUBLE_DELIMITER.contains(curChar_nextChar)  // Double DELIMITER: :=, <=, >=
                     {
                         resultStr += curChar_nextChar
-                        endPos += 1
+                        endPos = nextPos + 1
                         nextPos += 2
                         break
                     }
@@ -90,7 +94,7 @@ class Scanner{
                         {
                             self.isCommentStack.push(object: nextPos as AnyObject)
                             resultStr += curChar_nextChar
-                            endPos += 1
+                            endPos = nextPos + 1
                             nextPos += 2
                             break
                         }
@@ -100,7 +104,7 @@ class Scanner{
                             {
                                 self.isCommentStack.pop()
                                 resultStr += curChar_nextChar
-                                endPos += 1
+                                endPos = nextPos + 1
                                 nextPos += 2
                                 break
                             }
@@ -135,7 +139,7 @@ class Scanner{
                 {
                     break
                 }
-                else if GlobalVal.SKIP.contains(curChar)  // DELIMITER at end, end scan
+                else if GlobalVal.DELIMITER.contains(curChar)  // DELIMITER at end, end scan
                 {
                     break
                 }
@@ -182,7 +186,7 @@ class Scanner{
                         self.nextPos = nextPos - (resultStr.count - lastPos)
                         let newToken = Token(inputStr: tmpStr, type: tmpType, firstPos: startPos, lastPos: startPos+lastPos-1, lineNum: self.curLine, posNum: self.curPos, myErrHandler: self.myErrHandler)
                         self.getUnaccepableStr = self.nextPos
-                        self.curPos += 1
+//                        self.curPos += 1
                         return newToken
                     }
                 }
@@ -190,7 +194,7 @@ class Scanner{
                 self.myErrHandler.RecordScannerError(errMsg: ErrMsg, lineNum: self.curLine , posNum: self.curPos)
             }
             let newToken = Token(inputStr: resultStr, type: curType, firstPos: startPos, lastPos: endPos, lineNum: self.curLine, posNum: self.curPos, myErrHandler: self.myErrHandler)
-            self.curPos += 1
+//            self.curPos += 1
             return newToken
         }
     }
